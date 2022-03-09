@@ -14,7 +14,7 @@ class LoginUI extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: 'login',
       routes: { 'login': (context) => const LoginScreen(),
-        'signup': (context) => const SignupScreen()
+        'signup': (context) => const SignupScreen(),
       },
     );
   }
