@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'screen_login.dart';
+import 'login.dart';
+import 'signup.dart';
 
 
-void main() => runApp(LoginUI());
+void main() => runApp(const LoginUI());
 
 class LoginUI extends StatelessWidget {
   const LoginUI({Key? key}) : super(key: key);
@@ -11,14 +12,12 @@ class LoginUI extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-
-      home: Scaffold(
-
-        body: const LoginScreen(),
-    ),
+      initialRoute: 'login',
+      routes: { 'login': (context) => const LoginScreen(),
+        'signup': (context) => const SignupScreen()
+      },
     );
   }
+
+
 }
-
-
-
